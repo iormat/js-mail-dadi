@@ -14,9 +14,25 @@ const valid = document.getElementById('positive');
 const invalid = document.getElementById('negative');
 
 // create condition
-if(mailingList.includes(uMail)){
+// if(mailingList.includes(uMail)){
+//     valid.append("la tua mail è presente!");
+//     console.log(uMail + "ok");
+// }else {
+//     invalid.append("Mi spiace, ma non sei stato invitato!");
+// }
+
+//create cycle to get also array position if true
+let x = false;
+
+for(let i = 0; i < mailingList.length; i++) {
+    if(uMail === mailingList[i]){
+        console.log(`${uMail} trovata in posizione: ${i}`)
+        x = true;
+    }
+}
+
+if(x === true){
     valid.append("la tua mail è presente!");
-    console.log(uMail + "ok");
 }else {
     invalid.append("Mi spiace, ma non sei stato invitato!");
 }
