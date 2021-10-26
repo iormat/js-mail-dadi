@@ -6,6 +6,7 @@ PRINT MESSAGE TO SHOW IF APPROVED OR NOT
 
 // array
 const mailingList = ["pincopanco@doe.it", "pancopinco@doe.it", "pincopanco@doe.com", "pancopinco@doe.com",];
+console.log("Queste sono le mail accettate: " + mailingList);
 // variable of user input
 let uMail = prompt("Qual è la tua email?");
 // variable validity
@@ -17,5 +18,5 @@ if(mailingList.includes(uMail)){
     valid.append("la tua mail è presente!");
     console.log(uMail + "ok");
 }else {
-    valid.append("Mi spiace, ma non sei stato invitato!");
+    invalid.append("Mi spiace, ma non sei stato invitato!");
 }
